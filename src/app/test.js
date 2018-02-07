@@ -23,7 +23,7 @@ nanomorph.__name = 'nanomorph' // 565/565 passing
  * RUN TESTS
  */
 
-abstractMorph(minmorph)
+// abstractMorph(minmorph)
 abstractKeyed(minmorph)
-abstractFuzz(minmorph)
-abstractEvents(minmorph)
+// abstractFuzz(minmorph)
+// abstractEvents(minmorph)

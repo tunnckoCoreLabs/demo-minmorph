@@ -265,10 +265,5 @@ export default function abstractMorph (morph) {
       const zzz = morph(a, x)
       t.equal(zzz.outerHTML, expected2, 'result was expected')
     })
-
-    t.test(`diff name: ${morph.__name}`, (t) => {
-      t.pass(`diff name: ${morph.__name}`)
-      t.end()
-    })
   })
 }

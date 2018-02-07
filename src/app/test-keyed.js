@@ -172,10 +172,5 @@ export default function abstractKeyed (morph) {
       // t.equal(c.children[0].children[0], child, 'is the same node')
       t.end()
     })
-
-    t.test(`diff name: ${morph.__name}`, (t) => {
-      t.pass(`diff name: ${morph.__name}`)
-      t.end()
-    })
   })
 }
