@@ -1350,6 +1350,10 @@ domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
 
+domdiff@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/domdiff/-/domdiff-0.3.6.tgz#84d1acf7f3535710ad39b9c97442d92a19bfd409"
+
 domelementtype@1, domelementtype@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.3.0.tgz#b17aed82e8ab59e52dd9c19b1756e0fc187204c2"
@@ -3028,6 +3032,12 @@ math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
 
+math-random-seed@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/math-random-seed/-/math-random-seed-1.0.0.tgz#78a1faafdbf877b7b1924a983bf3eba23dd57680"
+  dependencies:
+    random-bytes-seed "^1.0.2"
+
 md5-hex@^1.2.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/md5-hex/-/md5-hex-1.3.0.tgz#d2c4afe983c4370662179b8cad145219135046c4"
@@ -4136,6 +4146,10 @@ querystring@0.2.0:
 quick-lru@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-1.1.0.tgz#4360b17c61136ad38078397ff11416e186dcfbb8"
+
+random-bytes-seed@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/random-bytes-seed/-/random-bytes-seed-1.0.2.tgz#9a4a07eeaeb3215a45c0c879e96e7516a466ab75"
 
 randomatic@^1.1.3:
   version "1.1.7"
