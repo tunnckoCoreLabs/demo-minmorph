@@ -1,10 +1,7 @@
 /* eslint-disable no-param-reassign, no-multi-assign, no-plusplus, max-liness */
 
-// const diff = require('./key-diff')
-// import mindiff from './mindiff'
-import domdiff from './webdiff'
-// import domdiff from './domdiff'
-// const diff = require('domdiff').default
+// a bit modified, keyed version, almost working
+import domdiff from './domdiff'
 
 /**
  * Helpers
