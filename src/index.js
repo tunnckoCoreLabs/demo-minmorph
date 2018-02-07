@@ -141,8 +141,6 @@ function morphProps (left, right, props) {
 function morphAttribute ({ left, right }, props, opts) {
   if (opts.attrName === 'style') {
     updateStyle({ left, right }, props, opts)
-  } else if (opts.attrName.startsWith('on')) {
-    left.addEventListener(opts.attrName, props[opts.attrName].value)
   } else {
     updateAttribute({ left }, props, opts)
   }

@@ -161,7 +161,7 @@ export default function abstractKeyed (morph) {
     t.test('nested without id', (t) => {
       const child = html`<div id="child">child</div>`
       const placeholder = html`<div id="child">placeholder</div>`
-      placeholder.isSameNode = (el) => true
+      placeholder.isSameNode = (el) => el === child
 
       const a = html`<div><div>${child}</div></div>`
       const expected = a.outerHTML
