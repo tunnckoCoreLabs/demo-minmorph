@@ -325,7 +325,7 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-asyncro@^3.0.0:
+asyncro@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/asyncro/-/asyncro-3.0.0.tgz#3c7a732e263bc4a42499042f48d7d858e9c0134e"
 
@@ -545,7 +545,7 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bel@^5.1.6:
+bel@5.1.6:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/bel/-/bel-5.1.6.tgz#6e98ed2f0add3c48f0ac83f6e15dc9754ea16ac6"
   dependencies:
@@ -815,7 +815,7 @@ chardet@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
 
-chokidar-cli@^1.2.0:
+chokidar-cli@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/chokidar-cli/-/chokidar-cli-1.2.0.tgz#8e7f58442273182018be1868e53c22af65a21948"
   dependencies:
@@ -1350,7 +1350,7 @@ domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
 
-domdiff@^0.3.6:
+domdiff@0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/domdiff/-/domdiff-0.3.6.tgz#84d1acf7f3535710ad39b9c97442d92a19bfd409"
 
@@ -1484,7 +1484,7 @@ eslint-config-airbnb@^16.0.0:
   dependencies:
     eslint-config-airbnb-base "^12.1.0"
 
-eslint-config-tunnckocore@^0.3.0:
+eslint-config-tunnckocore@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/eslint-config-tunnckocore/-/eslint-config-tunnckocore-0.3.0.tgz#222fec1182bc52dd8d92925921f07f61b068e6ce"
   dependencies:
@@ -1584,7 +1584,7 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^4.0.0, eslint@^4.16.0, eslint@^4.5.0:
+eslint@4.16.0, eslint@^4.0.0, eslint@^4.5.0:
   version "4.16.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.16.0.tgz#934ada9e98715e1d7bbfd6f6f0519ed2fab35cc1"
   dependencies:
@@ -2242,7 +2242,7 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
-hela-config-tunnckocore@^2.2.41:
+hela-config-tunnckocore@2.2.41:
   version "2.2.41"
   resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-2.2.41.tgz#cbb4387cd3935f4d4533a7bf51c0f0a9c884fc56"
   dependencies:
@@ -2257,7 +2257,7 @@ hela-config-tunnckocore@^2.2.41:
     rimraf "2.6.2"
     semver "5.5.0"
 
-hela@^2.0.6:
+hela@2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/hela/-/hela-2.0.6.tgz#5f4b3415c08bc11770822fb89864ac3e0090f747"
   dependencies:
@@ -3032,7 +3032,7 @@ math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
 
-math-random-seed@^1.0.0:
+math-random-seed@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/math-random-seed/-/math-random-seed-1.0.0.tgz#78a1faafdbf877b7b1924a983bf3eba23dd57680"
   dependencies:
@@ -3217,7 +3217,7 @@ nanomatch@^1.2.5:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nanomorph@^5.1.3:
+nanomorph@5.1.3:
   version "5.1.3"
   resolved "https://registry.yarnpkg.com/nanomorph/-/nanomorph-5.1.3.tgz#65b81912bb32278aaa7aacc9ccd99b4508f6a21d"
   dependencies:
@@ -3551,7 +3551,7 @@ pako@~1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
 
-parcel-bundler@^1.5.1:
+parcel-bundler@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/parcel-bundler/-/parcel-bundler-1.5.1.tgz#6329100030fe2916cc0ad09bc619a303005382de"
   dependencies:
@@ -4454,7 +4454,7 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
-rollup@^0.55.3:
+rollup@0.55.3:
   version "0.55.3"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.55.3.tgz#0af082a766d51c3058430c8372442ff5207d8736"
 
@@ -4895,7 +4895,7 @@ table@^4.0.1:
     slice-ansi "1.0.0"
     string-width "^2.1.1"
 
-tape@^4.8.0:
+tape@4.8.0:
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/tape/-/tape-4.8.0.tgz#f6a9fec41cc50a1de50fa33603ab580991f6068e"
   dependencies:

@@ -25,21 +25,21 @@
     "src/"
   ],
   "dependencies": {
-    "bel": "^5.1.6",
-    "domdiff": "^0.3.6",
-    "nanomorph": "^5.1.3",
-    "parcel-bundler": "^1.5.1"
+    "bel": "5.1.6",
+    "domdiff": "0.3.6",
+    "nanomorph": "5.1.3",
+    "parcel-bundler": "1.5.1"
   },
   "devDependencies": {
-    "asyncro": "^3.0.0",
-    "chokidar-cli": "^1.2.0",
-    "eslint": "^4.16.0",
-    "eslint-config-tunnckocore": "^0.3.0",
-    "hela": "^2.0.6",
-    "hela-config-tunnckocore": "^2.2.41",
-    "math-random-seed": "^1.0.0",
-    "rollup": "^0.55.3",
-    "tape": "^4.8.0"
+    "asyncro": "3.0.0",
+    "chokidar-cli": "1.2.0",
+    "eslint": "4.16.0",
+    "eslint-config-tunnckocore": "0.3.0",
+    "hela": "2.0.6",
+    "hela-config-tunnckocore": "2.2.41",
+    "math-random-seed": "1.0.0",
+    "rollup": "0.55.3",
+    "tape": "4.8.0"
   },
   "keywords": [
     "automation"
