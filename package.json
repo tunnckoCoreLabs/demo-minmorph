@@ -33,7 +33,7 @@
   "devDependencies": {
     "asyncro": "3.0.0",
     "chokidar-cli": "1.2.0",
-    "eslint": "4.16.0",
+    "eslint": "4.17.0",
     "eslint-config-tunnckocore": "0.3.0",
     "hela": "2.0.6",
     "hela-config-tunnckocore": "2.2.41",
