@@ -34,7 +34,7 @@
     "asyncro": "3.0.0",
     "chokidar-cli": "1.2.0",
     "eslint": "4.18.1",
-    "eslint-config-tunnckocore": "0.3.0",
+    "eslint-config-tunnckocore": "1.0.1",
     "hela": "2.0.8",
     "hela-config-tunnckocore": "2.2.44",
     "math-random-seed": "1.0.0",
