@@ -39,7 +39,7 @@
     "hela-config-tunnckocore": "2.2.44",
     "math-random-seed": "1.0.0",
     "rollup": "0.55.5",
-    "tape": "4.8.0"
+    "tape": "4.9.0"
   },
   "keywords": [
     "automation"
