@@ -1915,9 +1915,9 @@ domain-browser@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
 
-domdiff@0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/domdiff/-/domdiff-0.3.6.tgz#84d1acf7f3535710ad39b9c97442d92a19bfd409"
+domdiff@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/domdiff/-/domdiff-0.4.0.tgz#07fc600eb2d6659bfab617c0014408bd07ffcb27"
 
 domelementtype@1, domelementtype@^1.3.0:
   version "1.3.0"
