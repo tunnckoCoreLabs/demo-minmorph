@@ -35,7 +35,7 @@
     "chokidar-cli": "1.2.0",
     "eslint": "4.19.1",
     "eslint-config-tunnckocore": "0.3.0",
-    "hela": "2.0.8",
+    "hela": "2.0.10",
     "hela-config-tunnckocore": "2.2.44",
     "math-random-seed": "1.0.0",
     "rollup": "0.58.2",
