@@ -38,7 +38,7 @@
     "hela": "2.0.10",
     "hela-config-tunnckocore": "2.2.44",
     "math-random-seed": "1.0.0",
-    "rollup": "0.60.2",
+    "rollup": "0.60.7",
     "tape": "4.9.1"
   },
   "keywords": [
