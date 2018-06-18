@@ -26,7 +26,7 @@
   ],
   "dependencies": {
     "bel": "6.0.0",
-    "domdiff": "0.4.0",
+    "domdiff": "0.4.2",
     "nanomorph": "5.1.3",
     "parcel-bundler": "1.9.1"
   },
