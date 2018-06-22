@@ -204,7 +204,7 @@ function updateStyle ({ left, right }, props, opts) {
   }
 }
 
-function updateAttribute ({ left, right }, props, opts) {
+function updateAttribute ({ left }, props, opts) {
   const { attrName, attrValue, ns } = opts
   const oldProp = props[attrName]
   const hasIn = attrName in props
@@ -466,14 +466,14 @@ function getKey (node) {
 }
 
 // left: old node / right: new node
-function same (left, right) {
-  if (!right || !left) return false
+// function same (left, right) {
+//   if (!right || !left) return false
 
-  const nextKey = getKey(right)
-  if (nextKey) return nextKey === getKey(left)
+//   const nextKey = getKey(right)
+//   if (nextKey) return nextKey === getKey(left)
 
-  // if (right.nodeType === 3) return right.nodeValue === left.nodeValue
-  if (right.isSameNode) return right.isSameNode(left)
-  if (right.nodeName === left.nodeName) return true
-  return false
-}
+//   // if (right.nodeType === 3) return right.nodeValue === left.nodeValue
+//   if (right.isSameNode) return right.isSameNode(left)
+//   if (right.nodeName === left.nodeName) return true
+//   return false
+// }
