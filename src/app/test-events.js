@@ -1,8 +1,8 @@
 /* eslint-disable max-lines, max-statements, no-shadow, no-underscore-dangle */
-import tape from 'tape'
-import html from 'bel'
+const tape = require('tape')
+const html = require('nanohtml')
 
-export default abstractMorphEvents
+module.exports = abstractMorphEvents
 
 function raiseEvent (element, eventName) {
   const event = document.createEvent('Event') // eslint-disable-line

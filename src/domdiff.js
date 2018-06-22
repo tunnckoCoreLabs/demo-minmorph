@@ -23,7 +23,7 @@ const identity = function identity (O) {
   return O
 }
 
-export default function domdiff (
+module.exports = function domdiff (
   parentNode, // where changes happen
   currentNodes, // Array of current items/nodes
   futureNodes, // Array of future items/nodes

@@ -8,6 +8,7 @@
     "import/extensions": "off",
     "comma-dangle": "off",
     "global-require": "off",
-    "semi": ["error", "never"]
+    "semi": ["error", "never"],
+    "max-statements": ["error", {"max": 20}]
   }
 }

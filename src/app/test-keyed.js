@@ -1,8 +1,8 @@
 /* eslint-disable max-lines, max-statements, no-shadow, no-underscore-dangle */
-import tape from 'tape'
-import html from 'bel'
+const tape = require('tape')
+const html = require('nanohtml')
 
-export default function abstractKeyed (morph) {
+module.exports = function abstractKeyed (morph) {
   tape('use "id" as a key hint', (t) => {
     t.test('append an element', (t) => {
       const a = html`<ul>

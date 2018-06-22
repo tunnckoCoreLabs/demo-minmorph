@@ -1,7 +1,8 @@
 /* eslint-disable no-param-reassign, no-multi-assign, no-plusplus, max-liness */
 
 // a bit modified, keyed version, almost working
-import domdiff from './domdiff'
+const domdiff = require('./domdiff')
+const events = require('./events')
 
 /**
  * Helpers
@@ -33,9 +34,7 @@ function decamelize (str) {
  * right: new node
  */
 
-export default patch
-
-function patch (left, right) {
+module.exports = function minmorph (left, right) {
   if (!left) {
     return right
   } else if (!right) {
@@ -57,8 +56,19 @@ function patch (left, right) {
   const props = {}
   morph(left, right, props)
   morphChilds(left, right)
-
+  updateEvents(left, right)
   return left
+}
+
+function updateEvents (left, right) {
+  for (let i = 0; i < events.length; i++) {
+    const ev = events[i]
+    if (right[ev]) { // if new element has a whitelisted attribute
+      left[ev] = right[ev] // update existing element
+    } else if (left[ev]) { // if existing element has it and new one doesnt
+      left[ev] = undefined // remove it from existing element
+    }
+  }
 }
 
 /**
@@ -89,6 +99,8 @@ function morph (left, right, props) {
   if (left.nodeName === 'TEXTAREA') {
     updateTextarea(left, right)
   }
+
+  // updateEvents(left, right)
 
   return left
 }
@@ -124,7 +136,7 @@ function morphProps (left, right, props) {
   // eslint-disable-next-line
   for (const name in props) {
     const oldAttr = props[name]
-    if (!right.attributes[name]) {
+    if (!right.attributes[name] && !name.startsWith('on')) {
       left.removeAttributeNS(oldAttr.ns, name)
     }
   }
@@ -135,14 +147,14 @@ function morphProps (left, right, props) {
  * - `.nodeName` is always uppercase, no matter of the browser?!
  *
  * @param {any} { left, right }
- * @param {any} props
+ * @param {any} props - the left attribute nodes cache
  * @param {any} opts
  */
 function morphAttribute ({ left, right }, props, opts) {
   if (opts.attrName === 'style') {
     updateStyle({ left, right }, props, opts)
-  } else {
-    updateAttribute({ left }, props, opts)
+  } else if (!opts.attrName.startsWith('on')) {
+    updateAttribute({ left, right }, props, opts)
   }
 }
 
@@ -192,15 +204,14 @@ function updateStyle ({ left, right }, props, opts) {
   }
 }
 
-function updateAttribute ({ left }, props, opts) {
+function updateAttribute ({ left, right }, props, opts) {
   const { attrName, attrValue, ns } = opts
   const oldProp = props[attrName]
   const hasIn = attrName in props
 
   if (!hasIn) {
     setAttr({ left }, props, opts)
-  }
-  if (hasIn && oldProp.value !== attrValue) {
+  } else if (hasIn && oldProp.value !== attrValue) {
     if (attrValue === 'null' || attrValue === 'undefined') {
       left.removeAttributeNS(ns, attrName)
       delete props[attrName] // eslint-disable-line no-param-reassign
@@ -212,7 +223,6 @@ function updateAttribute ({ left }, props, opts) {
 
 function setAttr ({ left }, props, opts) {
   const { attrName, attrValue, ns } = opts
-
   left.setAttributeNS(ns, attrName, attrValue)
 
   props[attrName] = props[attrName] || {}

@@ -1,6 +1,6 @@
-import bel from 'bel'
-import nanomorph from 'nanomorph'
-import minmorph from '../index'
+const bel = require('bel')
+const nanomorph = require('nanomorph')
+const minmorph = require('../index')
 
 function createList () {
   function shuffle (type) {

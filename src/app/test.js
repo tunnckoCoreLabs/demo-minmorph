@@ -1,11 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 
-import nanomorph from 'nanomorph'
-import minmorph from '../index'
-import abstractMorph from './test-normal' // 31/31 passing
-import abstractKeyed from './test-keyed' // 15/19 passing
-import abstractFuzz from './test-fuzz' // 422/422 passing
-import abstractEvents from './test-events' // 31/93 passing
+const nanomorph = require('nanomorph')
+const minmorph = require('../index')
+const abstractMorph = require('./test-morph') // 31/31 passing
+const abstractKeyed = require('./test-keyed') // 15/19 passing
+const abstractFuzz = require('./test-fuzz') // 422/422 passing
+const abstractEvents = require('./test-events') // 31/93 passing
 
 /**
  * MINmorph
@@ -23,7 +23,7 @@ nanomorph.__name = 'nanomorph' // 565/565 passing
  * RUN TESTS
  */
 
-// abstractMorph(minmorph)
+abstractMorph(minmorph)
 abstractKeyed(minmorph)
-// abstractFuzz(minmorph)
-// abstractEvents(minmorph)
+abstractFuzz(minmorph)
+abstractEvents(minmorph)

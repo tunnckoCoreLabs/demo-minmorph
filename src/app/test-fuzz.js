@@ -2,9 +2,9 @@
 const seed = require('math-random-seed')
 
 const tape = require('tape')
-const html = require('bel')
+const html = require('nanohtml')
 
-export default function fuzz(morph) {
+module.exports = function fuzz(morph) {
   tape('chaos monkey #1', (t) => {
     let a, b
     a = html`<div r="r"><div></div></div>`

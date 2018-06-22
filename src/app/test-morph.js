@@ -1,8 +1,8 @@
 /* eslint-disable max-lines, max-statements, no-shadow, no-underscore-dangle */
-import tape from 'tape'
-import html from 'bel'
+const tape = require('tape')
+const html = require('nanohtml')
 
-export default function abstractMorph (morph) {
+module.exports = function abstractMorph (morph) {
   tape('abstract morph', (t) => {
     t.test('root level', (t) => {
       t.test('should replace a node', (t) => {
