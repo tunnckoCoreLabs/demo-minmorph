@@ -1,4 +1,4 @@
-const bel = require('bel')
+const html = require('nanohtml')
 const nanomorph = require('nanomorph')
 const minmorph = require('../index')
 
@@ -21,7 +21,7 @@ function createList () {
   }
 
   function render () {
-    return bel`<div className="app">
+    return html`<div className="app">
       <h1>Random number: ${Math.random()}</h1>
       <button onclick=${() => shuffle('minmorph')}> Shuffle minmorph</button>
       <button onclick=${() => shuffle('nanomorph')}> Shuffle nanomorph</button>
@@ -34,14 +34,14 @@ function createList () {
 
 function list (items, shuffle) {
   function render () {
-    return bel`<ul>
-    ${items.map((item, i) => bel`<li id=${i}-${item}>${button(i, item)}</li>`)}
+    return html`<ul>
+    ${items.map((item, i) => html`<li id=${i}-${item}>${button(i, item)}</li>`)}
     </ul>`
   }
-  function button (id, label) {
-    return bel`<button class="${label}" onclick=${function () {
+  function button (id, lahtml) {
+    return html`<button class="${lahtml}" onclick=${function () {
       shuffle(id)
-    }}>${label}</button>`
+    }}>${lahtml}</button>`
   }
   const element = render()
   return element

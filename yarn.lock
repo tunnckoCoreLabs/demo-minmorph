@@ -358,20 +358,6 @@ asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
 
-asia@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/asia/-/asia-0.9.5.tgz#824491eb52e8804ec20da03708e00356b4891711"
-  dependencies:
-    auto-bind "^1.2.0"
-    chai "^4.1.2"
-    failing-code azer/failing-code
-    p-finally "^1.0.0"
-    p-map "^1.2.0"
-    p-map-series "^1.0.0"
-    p-memoize "^2.0.0"
-    p-reflect "^1.0.0"
-    pretty-config "^0.3.0"
-
 asky@0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/asky/-/asky-0.2.2.tgz#f3faa91ce4b34354a3ce2a954d18062302a07333"
@@ -403,10 +389,6 @@ assert@^1.1.1, assert@^1.4.0:
   resolved "https://registry.yarnpkg.com/assert/-/assert-1.4.1.tgz#99912d591836b5a6f5b345c0f07eefc08fc65d91"
   dependencies:
     util "0.10.3"
-
-assertion-error@^1.0.1:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz#e60b6b0e8f301bd97e5375215bda406c85118c0b"
 
 assign-symbols@^1.0.0:
   version "1.0.0"
@@ -445,10 +427,6 @@ asyncro@3.0.0:
 atob@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.0.3.tgz#19c7a760473774468f20b2d2d03372ad7d4cbf5d"
-
-auto-bind@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/auto-bind/-/auto-bind-1.2.1.tgz#807f7910b0210db9eefe133f3492c28e89698b96"
 
 autoprefixer@^6.3.1:
   version "6.7.7"
@@ -1460,17 +1438,6 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
-chai@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/chai/-/chai-4.1.2.tgz#0f64584ba642f0f2ace2806279f4f06ca23ad73c"
-  dependencies:
-    assertion-error "^1.0.1"
-    check-error "^1.0.1"
-    deep-eql "^3.0.0"
-    get-func-name "^2.0.0"
-    pathval "^1.0.0"
-    type-detect "^4.0.0"
-
 chalk@2.3.0, chalk@^2.0.0, chalk@^2.1.0, chalk@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.0.tgz#b5ea48efc9c1793dccc9b4767c93914d3f2d52ba"
@@ -1522,10 +1489,6 @@ chardet@^0.4.0:
 charenc@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
-
-check-error@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
 
 chokidar-cli@1.2.0:
   version "1.2.0"
@@ -2098,12 +2061,6 @@ decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
 decode-uri-component@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-
-deep-eql@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/deep-eql/-/deep-eql-3.0.1.tgz#dfc9404400ad1c8fe023e7da1df1c147c4b444df"
-  dependencies:
-    type-detect "^4.0.0"
 
 deep-equal@~1.0.1:
   version "1.0.1"
@@ -2839,17 +2796,6 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
 
-failing-code@azer/failing-code:
-  version "0.1.0"
-  resolved "https://codeload.github.com/azer/failing-code/tar.gz/a8cabcd723704da4eea2e2e94428ab110466f9d1"
-  dependencies:
-    failing-line "0.1.x"
-    is-node "0.0.0"
-
-failing-line@0.1.x:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/failing-line/-/failing-line-0.1.0.tgz#fc14fd8f0801a641f1144e4e893010ab6fea2496"
-
 falafel@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/falafel/-/falafel-2.1.0.tgz#96bb17761daba94f46d001738b3cedf3a67fe06c"
@@ -3127,10 +3073,6 @@ get-assigned-identifiers@^1.2.0:
 get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.2.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
-
-get-func-name@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/get-func-name/-/get-func-name-2.0.0.tgz#ead774abee72e20409433a066366023dd6887a41"
 
 get-installed-path@^4.0.5:
   version "4.0.8"
@@ -3866,10 +3808,6 @@ is-glob@^4.0.0:
   dependencies:
     is-extglob "^2.1.1"
 
-is-node@0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/is-node/-/is-node-0.0.0.tgz#87dd650b87fb6a39c50caafee0e9f6835ec15e41"
-
 is-number@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-2.1.0.tgz#01fcbbb393463a548f2f466cce16dece49db908f"
@@ -4100,13 +4038,6 @@ js-yaml@^3.10.0, js-yaml@^3.9.1, js-yaml@~3.10.0:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js-yaml@^3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.0.tgz#eaed656ec8344f10f527c6bfa1b6e2244de167d1"
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^4.0.0"
-
 js-yaml@~3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
@@ -4129,10 +4060,6 @@ jsesc@~0.5.0:
 json-6@^0.1.128:
   version "0.1.128"
   resolved "https://registry.yarnpkg.com/json-6/-/json-6-0.1.128.tgz#0c52ddf38af9bd2d8ca5fdb402fc0e70776ccbf2"
-
-json-6@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/json-6/-/json-6-1.0.2.tgz#efb0324395c6170b5543ab1e1cd699277a8f7983"
 
 json-schema-traverse@^0.3.0:
   version "0.3.1"
@@ -4473,13 +4400,6 @@ mem@^1.1.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-mem@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/mem/-/mem-3.0.1.tgz#152410d0d7e835e4a4363e626238d9e5be3d6f5a"
-  dependencies:
-    mimic-fn "^1.0.0"
-    p-is-promise "^1.1.0"
-
 mentions-regex@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/mentions-regex/-/mentions-regex-2.0.3.tgz#442717a0048e53c2d2e2ae5e63a4e54a55ca9603"
@@ -4756,9 +4676,9 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nanomorph@5.1.3:
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/nanomorph/-/nanomorph-5.1.3.tgz#65b81912bb32278aaa7aacc9ccd99b4508f6a21d"
+nanomorph@^6.0.0-beta4:
+  version "6.0.0-beta4"
+  resolved "https://registry.yarnpkg.com/nanomorph/-/nanomorph-6.0.0-beta4.tgz#71cb9913f5f5c64d41fdfc70471d1aa3bc54874a"
   dependencies:
     nanoassert "^1.1.0"
 
@@ -5151,10 +5071,6 @@ p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
 
-p-is-promise@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/p-is-promise/-/p-is-promise-1.1.0.tgz#9c9456989e9f6588017b0434d56097675c3da05e"
-
 p-limit@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-1.2.0.tgz#0e92b6bedcb59f022c13d0f1949dc82d15909f1c"
@@ -5167,30 +5083,15 @@ p-locate@^2.0.0:
   dependencies:
     p-limit "^1.1.0"
 
-p-map-series@1.0.0, p-map-series@^1.0.0:
+p-map-series@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-map-series/-/p-map-series-1.0.0.tgz#bf98fe575705658a9e1351befb85ae4c1f07bdca"
   dependencies:
     p-reduce "^1.0.0"
 
-p-map@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
-
-p-memoize@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/p-memoize/-/p-memoize-2.0.0.tgz#ad8e4a509c5a769d92b4a9faa4b066905384a48c"
-  dependencies:
-    mem "^3.0.0"
-    mimic-fn "^1.0.0"
-
 p-reduce@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-reduce/-/p-reduce-1.0.0.tgz#18c2b0dd936a4690a529f8231f58a0fdb6a47dfa"
-
-p-reflect@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/p-reflect/-/p-reflect-1.0.0.tgz#f4fa1ee1bb546d8eb3ec0321148dfe0a79137bb8"
 
 p-try@^1.0.0:
   version "1.0.0"
@@ -5404,10 +5305,6 @@ path-type@^2.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-2.0.0.tgz#f012ccb8415b7096fc2daa1054c3d72389594c73"
   dependencies:
     pify "^2.0.0"
-
-pathval@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.0.tgz#b942e6d4bde653005ef6b71361def8727d0645e0"
 
 pbkdf2@^3.0.3:
   version "3.0.14"
@@ -5789,13 +5686,6 @@ prettier-eslint@8.8.1, prettier-eslint@^8.5.0:
 prettier@1.10.2, prettier@^1.7.0:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.10.2.tgz#1af8356d1842276a99a5b5529c82dd9e9ad3cc93"
-
-pretty-config@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/pretty-config/-/pretty-config-0.3.0.tgz#12f13cc3816b64f7a44e8b6ed823e6f222f05d26"
-  dependencies:
-    js-yaml "^3.12.0"
-    json-6 "^1.0.2"
 
 pretty-format@^22.0.3:
   version "22.1.0"
@@ -7247,10 +7137,6 @@ type-check@~0.3.2:
   resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.3.2.tgz#5884cab512cf1d355e3fb784f30804b2b520db72"
   dependencies:
     prelude-ls "~1.1.2"
-
-type-detect@^4.0.0:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
 
 typedarray@^0.0.6:
   version "0.0.6"

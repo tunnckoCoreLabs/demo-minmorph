@@ -87,7 +87,9 @@ function morph (left, right, props) {
 
   // if Text Nodes
   if (right.nodeType === 3) {
-    left.nodeValue = right.nodeValue
+    if (left.nodeValue !== right.nodeValue) {
+      left.nodeValue = right.nodeValue
+    }
   }
 
   if (left.nodeName === 'INPUT') {
