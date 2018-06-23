@@ -12,21 +12,15 @@ function raiseEvent(element, eventName) {
   element.dispatchEvent(event);
 }
 
-/* Note:
-  Failing tests have been commented. They include the following:
-
-  'onresume',
-  'onfreeze',
-  'onreadystatechange',
-  'onpointerlockchange',
-  'onpointerlockerror',
-  'onselectionchange',
-  'onvisibilitychange',
-  'onsecuritypolicyviolation',
-*/
+/**
+ * Notes:
+ *
+ * Failing tests have been excluded below.
+ * Only 8 of 98 fails for `minmorph`, and about 30+ for `nanomorph`.
+ *
+ */
 
 function excludeEvents(name) {
-  // from 98 event names
   const isFailing = [
     'onresume',
     'onfreeze',
