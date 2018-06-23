@@ -1,4 +1,4 @@
-/* eslint-disable no-param-reassign, no-multi-assign, no-plusplus, max-liness */
+/* eslint-disable no-param-reassign, no-multi-assign, no-plusplus, max-line */
 
 // a bit modified, keyed version, almost working
 const domdiff = require('./domdiff');
@@ -39,33 +39,26 @@ function minmorph(left, right) {
     return right;
   } else if (!right) {
     return null;
-  } /* if (isTextNode(right) && !isEqualText(left, right)) {
-    return right
-  } else */ else if (
-    right.isSameNode &&
-    right.isSameNode(left)
-  ) {
+  } else if (right.isSameNode && right.isSameNode(left)) {
     return left;
   } else if (left.nodeName !== right.nodeName) {
     return right;
   } else if (isSameTextNodes(left, right)) {
     return left;
   }
-  // probably not needed
-  // if (isTextNode(left) && isTextNode(right) && isEqualText(left, right)) {
-  //   return left
-  // }
 
   const props = {};
+
   morph(left, right, props);
   morphChilds(left, right);
-  updateEvents(left, right);
+  morphEvents(left, right);
+
   return left;
 }
 
 module.exports = minmorph;
 
-function updateEvents(left, right) {
+function morphEvents(left, right) {
   for (let i = 0; i < events.length; i++) {
     const ev = events[i];
     if (right[ev]) {
@@ -92,13 +85,6 @@ function morph(left, right, props) {
     morphProps(left, right, props);
   }
 
-  // if Text Nodes
-  if (right.nodeType === 3) {
-    if (left.nodeValue !== right.nodeValue) {
-      left.nodeValue = right.nodeValue;
-    }
-  }
-
   if (left.nodeName === 'INPUT') {
     updateInput(left, right);
   }
@@ -108,8 +94,6 @@ function morph(left, right, props) {
   if (left.nodeName === 'TEXTAREA') {
     updateTextarea(left, right);
   }
-
-  // updateEvents(left, right)
 
   return left;
 }
@@ -142,7 +126,7 @@ function morphProps(left, right, props) {
     });
   }
 
-  // eslint-disable-next-line
+  /* eslint-disable-next-line no-restricted-syntax, guard-for-in */
   for (const name in props) {
     const oldAttr = props[name];
     if (!right.attributes[name] && !name.startsWith('on')) {
@@ -168,7 +152,8 @@ function morphAttribute({ left, right }, props, opts) {
 }
 
 /**
- *
+ * Supports both camelCased and dash-cased style props
+ * like style={{ fontSize: 12 }} and style={{ 'font-size': 33 }}
  *
  * @param {any} { left, right }
  * @param {any} props
@@ -223,7 +208,7 @@ function updateAttribute({ left }, props, opts) {
   } else if (hasIn && oldProp.value !== attrValue) {
     if (attrValue === 'null' || attrValue === 'undefined') {
       left.removeAttributeNS(ns, attrName);
-      delete props[attrName]; // eslint-disable-line no-param-reassign
+      delete props[attrName];
     } else {
       setAttr({ left }, props, opts);
     }
@@ -262,10 +247,6 @@ function updateProp(left, right, name) {
   if (left[name] !== right[name]) {
     left[name] = right[name];
 
-    // we don't use setAttribute and removeAttribute
-    // because we already did that
-    // in the `morphProps -> morphAttribute -> updateAttribute` step
-
     if (right[name]) {
       left.setAttribute(name, '');
     } else {
@@ -295,194 +276,15 @@ function updateTextarea(left, right) {
 /* eslint-disable max-params, default-case */
 
 function morphChilds(left, right) {
-  // mindiff(left, right)
-  // const leftChilds = []
-  // const rightChilds = []
+  const leftChilds = [];
+  const rightChilds = [];
 
-  // for (let i = 0; i < left.childNodes.length; i++) {
-  //   leftChilds[i] = left.childNodes[i].cloneNode()
-  // }
-  // for (let j = 0; j < left.childNodes.length; j++) {
-  //   rightChilds[j] = right.childNodes[j].cloneNode()
-  // }
+  for (let i = 0; i < left.childNodes.length; i++) {
+    leftChilds[i] = left.childNodes[i];
+  }
+  for (let j = 0; j < left.childNodes.length; j++) {
+    rightChilds[j] = right.childNodes[j];
+  }
 
-  domdiff(minmorph, left, [...left.childNodes], [...right.childNodes]);
+  domdiff(minmorph, left, leftChilds, rightChilds);
 }
-
-// function morphChilds (left, right) {
-//   diff(left.childNodes, right.childNodes, handler(left.childNodes))
-
-//   function handler (list) {
-//     return (type, prevNode, nextNode, idx) => {
-//       switch (type) {
-//         case diff.CREATE:
-//           insertAt(left, list, idx, nextNode)
-//           break
-//         case diff.REMOVE:
-//           if (list[idx] && prevNode) {
-//             left.removeChild(prevNode)
-//           }
-//           break
-//         case diff.MOVE:
-//           patch(prevNode, nextNode)
-//           move(left, list, idx, prevNode)
-//           break
-//         case diff.UPDATE:
-//           patch(prevNode, nextNode)
-//           break
-//       }
-//     }
-//   }
-// }
-
-// function indexOf (list, item) {
-//   let i = 0
-//   for (; i < list.length; ++i) {
-//     if (list[i] === item) {
-//       return i
-//     }
-//   }
-//   return -1
-// }
-
-// function insertAt (left, list, idx, el) {
-//   if (!el) return
-//   if (list[idx] === el) {
-//     left.removeChild(el)
-//   } else {
-//     left.appendChild(el)
-//   }
-// }
-
-// function move (left, list, idx, el) {
-//   if (!el) return
-//   left.removeChild(el)
-//   insertAt(left, list, idx, el)
-// }
-
-// function morphChilds (left, right) {
-//   let morphed = null // eslint-disable-line
-//   let offset = 0 // eslint-disable-line
-
-//   const oldLen = left.childNodes.length
-//   const newLen = right.childNodes.length
-//   const fragment = left.ownerDocument.createDocumentFragment()
-
-//   // const keyed = {}
-//   // for (let i = 0; i < oldLen; i++) {
-//   //   const oldChild = left.childNodes[i]
-//   //   const oldKey = getKey(oldChild)
-
-//   //   if (oldKey) {
-//   //     keyed[oldKey] = oldChild
-//   //   }
-//   // }
-
-//   for (let j = 0; j <= newLen; j++) {
-//     if (j === newLen) {
-//       left.appendChild(fragment)
-//       break
-//     }
-
-//     const oldChild = left.childNodes[j]
-//     const newChild = right.childNodes[j - offset]
-
-//     // important: ORIGINAL!
-//     // if (!oldChild && !newChild) {
-//     //   break
-//     // } else if (!oldChild && newChild) {
-//     //   fragment.appendChild(newChild)
-//     //   offset++
-//     // } else if (oldChild && !newChild) {
-//     //   left.removeChild(oldChild)
-//     // } else if (isTextNode(oldChild) && isTextNode(newChild)) {
-//     //   if (!isEqualText(oldChild, newChild)) {
-//     //     left.replaceChild(newChild, oldChild)
-//     //   }
-//     // } else {
-//     //   morphed = patch(oldChild, newChild)
-//     //   if (morphed && morphed !== oldChild) {
-//     //     left.replaceChild(morphed, oldChild)
-//     //     offset++
-//     //   }
-//     // }
-//     // if (!oldChild && !newChild) {
-//     //   break
-//     // } else if (!oldChild && newChild) {
-//     //   fragment.appendChild(newChild)
-//     //   offset++
-//     // } else if (oldChild && !newChild) {
-//     //   left.removeChild(oldChild)
-//     // } else if (isTextNode(oldChild) && isTextNode(newChild)) {
-//     //   if (!isEqualText(oldChild, newChild)) {
-//     //     left.replaceChild(newChild, oldChild)
-//     //   }
-//     // } else {
-//     //   morphed = patch(oldChild, newChild)
-//     //   if (morphed && morphed !== oldChild) {
-//     //     left.replaceChild(morphed, oldChild)
-//     //     offset++
-//     //   }
-//     // }
-//     if (!oldChild && !newChild) {
-//       break
-//     } else if (!oldChild && newChild) {
-//       fragment.appendChild(newChild)
-//       offset++
-//     } else if (oldChild && !newChild) {
-//       left.removeChild(oldChild)
-//     } else if (isTextNode(oldChild) && isTextNode(newChild)) {
-//       // const areTextNodes = isTextNode(oldChild) && isTextNode(newChild)
-//       if (!isEqualText(oldChild, newChild)) {
-//         left.replaceChild(newChild, oldChild)
-//       }
-//     } else {
-//       // console.log('patch')
-//       // console.log('oldChild', oldChild)
-//       // console.log('newChild', newChild)
-//       // console.log('newChild.nextSibling', newChild.nextSibling)
-
-//       morphed = patch(oldChild, newChild)
-//       if (!same(oldChild, morphed)) {
-//         left.replaceChild(morphed, oldChild)
-//         offset++
-//       } else {
-//         left.insertBefore(morphed, oldChild)
-//         // console.log('xxx')
-//       }
-//       // if (morphed && morphed !== oldChild) {
-//       //   left.replaceChild(morphed, oldChild)
-//       //   offset++
-//       // }
-//     }
-//   }
-
-//   if (newLen === 0) {
-//     const range = left.ownerDocument.createRange()
-//     range.selectNodeContents(left)
-//     range.deleteContents()
-
-//     // if (left.parentNode) {
-//     //   left.parentNode.replaceChild(right, left)
-//     // }
-//   }
-// }
-
-// function getKey(node) {
-//   if (!node) return null;
-
-//   return node.key || (node.attributes && node.attributes.key) || node.id;
-// }
-
-// left: old node / right: new node
-// function same (left, right) {
-//   if (!right || !left) return false
-
-//   const nextKey = getKey(right)
-//   if (nextKey) return nextKey === getKey(left)
-
-//   // if (right.nodeType === 3) return right.nodeValue === left.nodeValue
-//   if (right.isSameNode) return right.isSameNode(left)
-//   if (right.nodeName === left.nodeName) return true
-//   return false
-// }

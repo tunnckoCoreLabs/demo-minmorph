@@ -161,7 +161,7 @@ module.exports = function abstractKeyed(morph) {
       // t.plan(4)
       const child = html`<div id="child">first</div>`;
       const placeholder = html`<div id="child">second</div>`;
-      placeholder.isSameNode = (el) => {
+      placeholder.isSameNode = (/* el */) => {
         // t.pass('should be called')
         console.log('should be called');
         return true;
