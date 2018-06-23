@@ -61,7 +61,6 @@ module.exports = function abstractKeyed(morph) {
       t.equal(c.outerHTML, target);
       t.end();
     });
-
     t.test('copy over children', (t) => {
       const a = html`<section>'hello'<section>`;
       const b = html`<section><div></div><section>`;
@@ -146,8 +145,8 @@ module.exports = function abstractKeyed(morph) {
     });
 
     t.test('nested with id', (t) => {
-      const child = html`<div id="child"></div>`;
-      const placeholder = html`<div id="child"></div>`;
+      const child = html`<div id="child">child</div>`;
+      const placeholder = html`<div id="child">placeholder</div>`;
       placeholder.isSameNode = (el) => el === child;
 
       const a = html`<div><div id="parent">${child}</div></div>`;
@@ -159,17 +158,33 @@ module.exports = function abstractKeyed(morph) {
     });
 
     t.test('nested without id', (t) => {
-      const child = html`<div id="child">child</div>`;
-      const placeholder = html`<div id="child">placeholder</div>`;
-      placeholder.isSameNode = (el) => el === child;
+      // t.plan(4)
+      const child = html`<div id="child">first</div>`;
+      const placeholder = html`<div id="child">second</div>`;
+      placeholder.isSameNode = (el) => {
+        // t.pass('should be called')
+        console.log('should be called');
+        return true;
+      };
 
-      const a = html`<div><div>${child}</div></div>`;
-      const expected = a.outerHTML;
-      const b = html`<div><div>${placeholder}</div></div>`;
+      const c = morph(child, placeholder);
+      t.equal(c.textContent, child.textContent, 'should be same equal');
 
-      const c = morph(a, b);
-      t.equal(c.outerHTML, expected, 'is same node');
-      // t.equal(c.children[0].children[0], child, 'is the same node')
+      const a = html`<div>${child}</div>`;
+      const b = html`<div>${placeholder}</div>`;
+
+      const d = morph(a, b);
+      t.equal(d.children[0], child, 'children same as child');
+
+      const a2 = html`<div><div>${child}</div></div>`;
+      const b2 = html`<div><div>${placeholder}</div></div>`;
+
+      const d2 = morph(a2, b2);
+
+      const actual = d2.children[0].children[0];
+      const expected = child;
+
+      t.equal(actual, expected, 'nested is same node as child');
       t.end();
     });
   });

@@ -34,7 +34,7 @@ function decamelize(str) {
  * right: new node
  */
 
-module.exports = function minmorph(left, right) {
+function minmorph(left, right) {
   if (!left) {
     return right;
   } else if (!right) {
@@ -61,7 +61,9 @@ module.exports = function minmorph(left, right) {
   morphChilds(left, right);
   updateEvents(left, right);
   return left;
-};
+}
+
+module.exports = minmorph;
 
 function updateEvents(left, right) {
   for (let i = 0; i < events.length; i++) {
@@ -304,7 +306,7 @@ function morphChilds(left, right) {
   //   rightChilds[j] = right.childNodes[j].cloneNode()
   // }
 
-  domdiff(left, [...left.childNodes], [...right.childNodes]);
+  domdiff(minmorph, left, [...left.childNodes], [...right.childNodes]);
 }
 
 // function morphChilds (left, right) {
@@ -466,11 +468,11 @@ function morphChilds(left, right) {
 //   }
 // }
 
-function getKey(node) {
-  if (!node) return null;
+// function getKey(node) {
+//   if (!node) return null;
 
-  return node.key || (node.attributes && node.attributes.key) || node.id;
-}
+//   return node.key || (node.attributes && node.attributes.key) || node.id;
+// }
 
 // left: old node / right: new node
 // function same (left, right) {
