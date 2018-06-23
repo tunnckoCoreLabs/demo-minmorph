@@ -1,15 +1,54 @@
-let events = []
+let events = [];
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   /* eslint-disable guard-for-in, no-restricted-syntax, no-undef */
   for (const key in document) {
-    const isEvent = document[key] == null || typeof document[key] === 'function'
+    const isEvent =
+      document[key] == null || typeof document[key] === 'function';
     if (key.startsWith('on') && isEvent) {
-      events.push(key)
+      events.push(key);
     }
   }
 } else {
   events = [
+    'onclick',
+    'ondblclick',
+    'onmousedown',
+    'onmouseup',
+    'onmouseover',
+    'onmousemove',
+    'onmouseout',
+    'onmouseenter',
+    'onmouseleave',
+    'ontouchcancel',
+    'ontouchend',
+    'ontouchmove',
+    'ontouchstart',
+    'ondragstart',
+    'ondrag',
+    'ondragenter',
+    'ondragleave',
+    'ondragover',
+    'ondrop',
+    'ondragend',
+    'onkeydown',
+    'onkeypress',
+    'onkeyup',
+    'onunload',
+    'onabort',
+    'onerror',
+    'onresize',
+    'onscroll',
+    'onselect',
+    'onchange',
+    'onsubmit',
+    'onreset',
+    'onfocus',
+    'onblur',
+    'oninput',
+    'oncontextmenu',
+    'onfocusin',
+    'onfocusout',
     'onreadystatechange',
     'onpointerlockchange',
     'onpointerlockerror',
@@ -23,59 +62,28 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     'onselectionchange',
     'onselectstart',
     'onvisibilitychange',
-    'onabort',
-    'onblur',
     'oncancel',
     'oncanplay',
     'oncanplaythrough',
-    'onchange',
-    'onclick',
     'onclose',
-    'oncontextmenu',
     'oncuechange',
-    'ondblclick',
-    'ondrag',
-    'ondragend',
-    'ondragenter',
-    'ondragleave',
-    'ondragover',
-    'ondragstart',
-    'ondrop',
     'ondurationchange',
     'onemptied',
     'onended',
-    'onerror',
-    'onfocus',
-    'oninput',
     'oninvalid',
-    'onkeydown',
-    'onkeypress',
-    'onkeyup',
     'onload',
     'onloadeddata',
     'onloadedmetadata',
     'onloadstart',
-    'onmousedown',
-    'onmouseenter',
-    'onmouseleave',
-    'onmousemove',
-    'onmouseout',
-    'onmouseover',
-    'onmouseup',
     'onmousewheel',
     'onpause',
     'onplay',
     'onplaying',
     'onprogress',
     'onratechange',
-    'onreset',
-    'onresize',
-    'onscroll',
     'onseeked',
     'onseeking',
-    'onselect',
     'onstalled',
-    'onsubmit',
     'onsuspend',
     'ontimeupdate',
     'ontoggle',
@@ -100,8 +108,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     'onfullscreenchange',
     'onfullscreenerror',
     'onfreeze',
-    'onresume'
-  ]
+    'onresume',
+  ];
 }
 
-module.exports = events
+module.exports = events;
