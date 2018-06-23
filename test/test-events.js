@@ -1,18 +1,20 @@
-/* eslint-disable max-lines, max-statements, no-shadow, no-underscore-dangle */
+/* eslint-env browser */
+/* eslint-disable no-shadow */
 const tape = require('tape');
 const html = require('nanohtml');
-const events = require('../events');
+const events = require('../src/events');
 
 module.exports = abstractMorphEvents;
 
 function raiseEvent(element, eventName) {
-  const event = document.createEvent('Event') // eslint-disable-line
+  const event = document.createEvent('Event');
   event.initEvent(eventName.slice(2), true, true);
   element.dispatchEvent(event);
 }
 
 /* Note:
-Failing tests have been commented. They include the following:
+  Failing tests have been commented. They include the following:
+
   'onresume',
   'onfreeze',
   'onreadystatechange',
@@ -24,6 +26,7 @@ Failing tests have been commented. They include the following:
 */
 
 function excludeEvents(name) {
+  // from 98 event names
   const isFailing = [
     'onresume',
     'onfreeze',

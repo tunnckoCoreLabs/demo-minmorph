@@ -1,4 +1,4 @@
-/* eslint-disable max-statements, no-plusplus, eqeqeq, max-depth, max-params, no-param-reassign */
+/* eslint-disable max-statements, no-plusplus, eqeqeq, max-params, no-param-reassign */
 
 /*! (c) 2017 Andrea Giammarchi (ISC) */
 

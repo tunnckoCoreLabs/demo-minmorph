@@ -1,4 +1,4 @@
-/* eslint-disable max-lines, max-statements, no-shadow, no-underscore-dangle */
+/* eslint-disable no-shadow */
 const tape = require('tape');
 const html = require('nanohtml');
 

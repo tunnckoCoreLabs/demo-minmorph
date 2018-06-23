@@ -1,4 +1,4 @@
-/* eslint-disable no-param-reassign, no-multi-assign, no-plusplus, max-line */
+/* eslint-disable no-param-reassign, no-multi-assign, no-plusplus */
 
 // a bit modified, keyed version, almost working
 const domdiff = require('./domdiff');
@@ -271,20 +271,6 @@ function updateTextarea(left, right) {
   }
 }
 
-/* eslint-disable max-statements, max-depth */
-
-/* eslint-disable max-params, default-case */
-
 function morphChilds(left, right) {
-  const leftChilds = [];
-  const rightChilds = [];
-
-  for (let i = 0; i < left.childNodes.length; i++) {
-    leftChilds[i] = left.childNodes[i];
-  }
-  for (let j = 0; j < left.childNodes.length; j++) {
-    rightChilds[j] = right.childNodes[j];
-  }
-
-  domdiff(minmorph, left, leftChilds, rightChilds);
+  domdiff(minmorph, left, [...left.childNodes], [...right.childNodes]);
 }

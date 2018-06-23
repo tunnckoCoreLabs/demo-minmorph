@@ -1,13 +1,29 @@
+/* eslint-disable no-underscore-dangle */
+
+const nanomorph = require('nanomorph');
+const minmorph = require('../src/index');
+const abstractMorph = require('./test-morph'); // 31/31 passing
+const abstractKeyed = require('./test-keyed'); // 14/19 passing
+const abstractFuzz = require('./test-fuzz'); // 422/422 passing
+const abstractEvents = require('./test-events'); // 93/93 passing
+
 /**
- * @copyright 2017-present, Charlike Mike Reagent <olsten.larck@gmail.com>
- * @license Apache-2.0
+ * MINmorph
  */
 
-// const test = require('mukla')
-// const { prepublish, publish } = require('../src/index.js')
+minmorph.__name = 'minMorph'; // 499/565 passing
 
-// test('exports an object with "publish" and "prepublish" funciotions', (done) => {
-//   test.strictEqual(typeof prepublish, 'function')
-//   test.strictEqual(typeof publish, 'function')
-//   done()
-// })
+/**
+ * NANO MORPH
+ */
+
+nanomorph.__name = 'nanomorph'; // 565/565 passing
+
+/**
+ * RUN TESTS
+ */
+
+abstractMorph(minmorph);
+abstractFuzz(minmorph);
+abstractEvents(minmorph);
+abstractKeyed(minmorph);

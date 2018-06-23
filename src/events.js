@@ -1,7 +1,8 @@
+/* eslint-env browser */
 let events = [];
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-  /* eslint-disable guard-for-in, no-restricted-syntax, no-undef */
+  /* eslint-disable guard-for-in, no-restricted-syntax */
   for (const key in document) {
     const isEvent =
       document[key] == null || typeof document[key] === 'function';

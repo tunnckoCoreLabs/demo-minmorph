@@ -1,8 +1,20 @@
+/* eslint-env browser */
 const html = require('nanohtml');
 const nanomorph = require('nanomorph');
-const minmorph = require('../index');
+const minmorph = require('../src/index');
 
 function createList() {
+  const element = render();
+
+  function render() {
+    return html`<div className="app">
+      <h1>Random number: ${Math.random()}</h1>
+      <button onclick=${() => shuffle('minmorph')}> Shuffle minmorph</button>
+      <button onclick=${() => shuffle('nanomorph')}> Shuffle nanomorph</button>
+      ${list(randomArray())}
+    </div>`;
+  }
+
   function shuffle(type) {
     let start;
 
@@ -28,15 +40,6 @@ function createList() {
     }
   }
 
-  function render() {
-    return html`<div className="app">
-      <h1>Random number: ${Math.random()}</h1>
-      <button onclick=${() => shuffle('minmorph')}> Shuffle minmorph</button>
-      <button onclick=${() => shuffle('nanomorph')}> Shuffle nanomorph</button>
-      ${list(randomArray())}
-    </div>`;
-  }
-  var element = render();
   return element;
 }
 
@@ -47,7 +50,7 @@ function list(items, shuffle) {
     </ul>`;
   }
   function button(id, lahtml) {
-    return html`<button class="${lahtml}" onclick=${function() {
+    return html`<button class="${lahtml}" onclick=${() => {
       shuffle(id);
     }}>${lahtml}</button>`;
   }

@@ -8,9 +8,10 @@
   "nspId": "sasa",
   "main": "./src/index.js",
   "scripts": {
+    "lint": "xaxa src test benchmark",
     "clean": "rm -rf .cache dist node_modules/.cache",
-    "budo:tests": "budo src/app/test.js --live --port 5000",
-    "bundle": "parcel src/app/index.html --port 5000",
+    "bench": "parcel benchmark/index.html --port 3000",
+    "test": "parcel test/index.html --port 5000",
     "cmd": "yarn clean && yarn bundle",
     "predev": "yarn cmd",
     "dev": "chokidar 'src/**' -c 'yarn cmd'"
@@ -35,8 +36,6 @@
     "arr-union": "^3.1.0",
     "eslint": "4.19.1",
     "eslint-config-tunnckocore": "0.3.0",
-    "prettier": "^1.13.5",
-    "prettier-eslint": "^8.8.2",
     "tape": "4.9.1",
     "xaxa": "^1.0.5"
   },
