@@ -30,6 +30,7 @@ module.exports = function abstractKeyed(morph) {
       t.end();
     });
 
+    // TODO: PRs welcome
     t.test('handle non-id elements', (t) => {
       const a = html`<ul>
           <li></li>
@@ -157,6 +158,7 @@ module.exports = function abstractKeyed(morph) {
       t.end();
     });
 
+    // TODO: PRs welcome
     t.test('nested without id', (t) => {
       // t.plan(4)
       const child = html`<div id="child">first</div>`;
