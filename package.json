@@ -37,7 +37,7 @@
     "eslint": "5.2.0",
     "eslint-config-tunnckocore": "0.3.0",
     "tape": "4.9.1",
-    "xaxa": "^1.0.5"
+    "xaxa": "^2.0.0"
   },
   "eslintConfig": {
     "extends": "./node_modules/xaxa/src/index.js"
