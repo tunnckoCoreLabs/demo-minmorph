@@ -27,7 +27,7 @@
     "src/"
   ],
   "dependencies": {
-    "math-random-seed": "^1.0.0",
+    "math-random-seed": "^2.0.0",
     "nanohtml": "^1.2.4",
     "nanomorph": "^6.0.0-beta4",
     "parcel-bundler": "^1.9.2"

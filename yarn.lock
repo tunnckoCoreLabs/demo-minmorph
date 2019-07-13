@@ -3349,11 +3349,11 @@ math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
 
-math-random-seed@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/math-random-seed/-/math-random-seed-1.0.0.tgz#78a1faafdbf877b7b1924a983bf3eba23dd57680"
+math-random-seed@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/math-random-seed/-/math-random-seed-2.0.0.tgz#2c5dabb9d477162bf321d42e485da0704ad90e2e"
   dependencies:
-    random-bytes-seed "^1.0.2"
+    random-bytes-seed "^1.0.3"
 
 md5.js@^1.3.4:
   version "1.3.4"
@@ -4382,9 +4382,9 @@ quote-stream@^1.0.1, quote-stream@~1.0.2:
     minimist "^1.1.3"
     through2 "^2.0.0"
 
-random-bytes-seed@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/random-bytes-seed/-/random-bytes-seed-1.0.2.tgz#9a4a07eeaeb3215a45c0c879e96e7516a466ab75"
+random-bytes-seed@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/random-bytes-seed/-/random-bytes-seed-1.0.3.tgz#126f1201dba2ec70cd0784f94a810396cad24a15"
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.0.6"
