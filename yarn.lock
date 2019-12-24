@@ -5458,9 +5458,9 @@ resolve@^1.3.3, resolve@^1.5.0, resolve@^1.6.0:
   dependencies:
     path-parse "^1.0.5"
 
-resolve@~1.13.1:
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.13.1.tgz#be0aa4c06acd53083505abb35f4d66932ab35d16"
+resolve@~1.14.1:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.14.1.tgz#9e018c540fcf0c427d678b9931cbf45e984bcaff"
   dependencies:
     path-parse "^1.0.6"
 
@@ -6031,9 +6031,9 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tape@4.12.0:
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/tape/-/tape-4.12.0.tgz#eb5382ac5d450f9c858819b2233458e69aeda4a8"
+tape@4.12.1:
+  version "4.12.1"
+  resolved "https://registry.yarnpkg.com/tape/-/tape-4.12.1.tgz#5fe2f0e2ef09ff0ec6f6d37f38300a6016082d91"
   dependencies:
     deep-equal "~1.1.1"
     defined "~1.0.0"
@@ -6045,7 +6045,7 @@ tape@4.12.0:
     is-regex "~1.0.5"
     minimist "~1.2.0"
     object-inspect "~1.7.0"
-    resolve "~1.13.1"
+    resolve "~1.14.1"
     resumer "~0.0.0"
     string.prototype.trim "~1.2.1"
     through "~2.3.8"
