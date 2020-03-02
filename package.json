@@ -36,7 +36,7 @@
     "arr-union": "^3.1.0",
     "eslint": "6.8.0",
     "eslint-config-tunnckocore": "3.0.0",
-    "tape": "4.13.0",
+    "tape": "4.13.2",
     "xaxa": "^2.0.0"
   },
   "eslintConfig": {
