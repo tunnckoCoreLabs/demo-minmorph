@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "arr-union": "^3.1.0",
-    "eslint": "7.12.1",
+    "eslint": "7.13.0",
     "eslint-config-tunnckocore": "3.0.0",
     "tape": "5.0.1",
     "xaxa": "^2.0.0"
